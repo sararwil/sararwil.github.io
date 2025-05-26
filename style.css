@@ -1,0 +1,73 @@
+body {
+  background-color: #cc5500; /* burnt orange */
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2em;
+}
+
+.container {
+  background-color: #f0d6b4; /* light orange / tan */
+  padding: 2em 3em;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1git commit -a -m "website updates except cv"
+git push
+clear
+git push
+git status
+clear
+lic;
+  margin-top: -1em;
+  margin-bottom: 2em;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+ul {
+  padding-left: 1.5em;
+}
+
+a {
+  color: #663300; /* darker brown for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #330000;
+  margin-top: 3em;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+
+.headshot {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #663300; /* dark brown border */
+  flex-shrink: 0;
+}
+
+.intro-text h1 {
+  margin: 0 0 0.3em 0;
+}
+
+.intro-text p {
+  margin: 0;
+  font-style: italic;
+}

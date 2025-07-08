@@ -1,12 +1,12 @@
-/* Colors */
+/* colors */
 :root {
-  --burnt-orange: #CC5500; /* a warm burnt orange */
-  --tan: #D2B48C;          /* tan */
+  --burnt-orange: #CC5500;
+  --brown: #64280e;    
   --black: #000000;
   --white: #FFFFFF;
 }
 
-/* Reset some default spacing */
+/* space */
 body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
@@ -14,14 +14,14 @@ body, h1, h2, p, ul, li {
   color: var(--black);
 }
 
-/* Body background */
+/* background */
 body {
-  background-color: var(--tan);
+  background-color: var(--brown);
   line-height: 1.6;
   padding: 20px;
 }
 
-/* Container for content with a max width */
+/* content! */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -32,7 +32,7 @@ body {
   box-shadow: 0 0 10px rgba(204, 85, 0, 0.3);
 }
 
-/* Header styling */
+/* header */
 .header-flex {
   display: flex;
   align-items: center;
@@ -61,7 +61,7 @@ body {
   font-weight: 600;
 }
 
-/* Section titles */
+/* sections */
 section h2 {
   color: var(--burnt-orange);
   margin-bottom: 15px;
@@ -69,13 +69,11 @@ section h2 {
   padding-bottom: 5px;
 }
 
-/* Paragraphs and lists */
 section p, section ul {
   margin-bottom: 25px;
   font-size: 1.1rem;
 }
 
-/* Lists */
 ul {
   list-style-type: disc;
   margin-left: 20px;
@@ -97,7 +95,7 @@ a:focus {
   text-decoration: underline;
 }
 
-/* Footer */
+/* footer */
 footer {
   text-align: center;
   margin-top: 40px;

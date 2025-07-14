@@ -1,8 +1,9 @@
 /* colors */
 :root {
-  --pink: #ff9bde;  
+  --pink: #ff8cd9;  
   --black: #000000;
   --white: #FFFFFF;
+  --light-pink: #ffceee; 
 }
 
 /* space */
@@ -15,7 +16,7 @@ body, h1, h2, p, ul, li {
 
 /* background */
 body {
-  background-color: var(--black);
+  background-color: var(--light-pink);
   line-height: 1.6;
   padding: 20px;
 }
@@ -51,7 +52,7 @@ body {
 
 .intro-text h1 {
   font-size: 2.8rem;
-  color: var(--burnt-orange);
+  color: var(--black;
   margin-bottom: 5px;
 }
 
@@ -62,9 +63,9 @@ body {
 
 /* sections */
 section h2 {
-  color: var(--burnt-orange);
+  color: var(--black);
   margin-bottom: 15px;
-  border-bottom: 2px solid var(--burnt-orange);
+  border-bottom: 2px solid var(--black);
   padding-bottom: 5px;
 }
 

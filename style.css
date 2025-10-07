@@ -45,12 +45,18 @@ body {
 }
 
 .headshot {
-  width: 180px;
-  height: 180px;
-  border-radius: 20px; /* square with slight round corners */
+  width: 220px;
+  height: 220px;
+  border-radius: 12px; /* square with slight rounding */
   border: 5px solid var(--gold);
   object-fit: cover;
   box-shadow: 0 0 15px rgba(255, 184, 28, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.headshot:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 184, 28, 0.7);
 }
 
 .intro-text h1 {
@@ -65,23 +71,23 @@ body {
   color: var(--white);
 }
 
-/* photo gallery */
+/* photo gallery - 4x1 row */
 .photo-gallery {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 25px;
   margin: 40px 0;
+  flex-wrap: nowrap; /* keep in single row */
 }
 
 .photo-gallery figure {
   text-align: center;
-  width: 28%;
+  width: 22%; /* 4 images per row */
 }
 
 .photo-gallery img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1; /* square images */
   object-fit: cover;
   border-radius: 12px;
   border: 4px solid var(--gold);
@@ -106,6 +112,7 @@ section h2 {
   border-bottom: 2px solid var(--gold);
   padding-bottom: 5px;
   font-size: 1.6rem;
+  font-weight: 700;
 }
 
 /* body text */
@@ -137,4 +144,32 @@ a:hover,
 a:focus {
   color: var(--white);
   border-bottom: 2px dotted var(--gold);
+}
+
+/* responsive adjustments */
+@media (max-width: 1024px) {
+  .photo-gallery figure {
+    width: 30%; /* 3 per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .headshot {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .photo-gallery figure {
+    width: 45%; /* 2 per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-gallery figure {
+    width: 100%; /* 1 per row */
+  }
 }

@@ -1,4 +1,71 @@
-/* photo gallery section */
+/* Pittsburgh Sports Theme – Black & Gold Edition */
+
+/* colors */
+:root {
+  --gold: #ffb81c;   /* Pittsburgh gold */
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #1a1a1a;   /* dark gray background for depth */
+}
+
+/* base styles */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  color: var(--white);
+}
+
+/* background */
+body {
+  background-color: var(--black);
+  line-height: 1.6;
+  padding: 30px;
+}
+
+/* container */
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  background-color: var(--gray);
+  border: 4px solid var(--gold);
+  border-radius: 16px;
+  padding: 40px 50px;
+  box-shadow: 0 0 25px rgba(255, 184, 28, 0.3);
+}
+
+/* header */
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 35px;
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 20px;
+}
+
+.headshot {
+  width: 180px;
+  height: 180px;
+  border-radius: 20px; /* square with slight round corners */
+  border: 5px solid var(--gold);
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255, 184, 28, 0.4);
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.intro-text p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* photo gallery */
 .photo-gallery {
   display: flex;
   justify-content: center;
@@ -8,35 +75,66 @@
 }
 
 .photo-gallery figure {
-  flex: 1 1 280px; /* ✅ bigger base width */
-  max-width: 280px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--gray);
-  border: 3px solid var(--black);
-  border-radius: 12px;
-  overflow: hidden;
-  padding: 10px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.photo-gallery figure:hover {
-  transform: scale(1.05);
-  border-color: var(--gold);
+  text-align: center;
+  width: 28%;
 }
 
 .photo-gallery img {
   width: 100%;
-  aspect-ratio: 4 / 3; /* keeps size consistent */
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
+  border: 4px solid var(--gold);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.05);
+  border-color: var(--white);
 }
 
 .photo-gallery figcaption {
-  margin-top: 10px;
-  text-align: center;
+  color: var(--gold);
   font-weight: bold;
-  font-size: 1.05rem;
-  color: var(--black);
+  margin-top: 8px;
+}
+
+/* section headings */
+section h2 {
+  color: var(--gold);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 5px;
+  font-size: 1.6rem;
+}
+
+/* body text */
+section p, section ul {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  color: var(--white);
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 25px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* links */
+a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px dotted transparent;
+  transition: all 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--white);
+  border-bottom: 2px dotted var(--gold);
 }

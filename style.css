@@ -1,11 +1,9 @@
-/* Pittsburgh Sports Theme – Black & Gold Edition */
-
 /* colors */
 :root {
-  --gold: #ffb81c;   /* Pittsburgh gold */
+  --gold: #ffb81c; 
   --black: #000000;
   --white: #ffffff;
-  --gray: #1a1a1a;   /* dark gray background for depth */
+  --gray: #1a1a1a; 
 }
 
 /* base styles */
@@ -47,7 +45,7 @@ body {
 .headshot {
   width: 220px;
   height: 220px;
-  border-radius: 12px; /* square with slight rounding */
+  border-radius: 12px;
   border: 5px solid var(--gold);
   object-fit: cover;
   box-shadow: 0 0 15px rgba(255, 184, 28, 0.4);
@@ -71,23 +69,22 @@ body {
   color: var(--white);
 }
 
-/* photo gallery - 4x1 row */
 .photo-gallery {
   display: flex;
   justify-content: center;
   gap: 25px;
   margin: 40px 0;
-  flex-wrap: nowrap; /* keep in single row */
+  flex-wrap: nowrap;
 }
 
 .photo-gallery figure {
   text-align: center;
-  width: 22%; /* 4 images per row */
+  width: 22%;
 }
 
 .photo-gallery img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* square images */
+  aspect-ratio: 1 / 1; 
   object-fit: cover;
   border-radius: 12px;
   border: 4px solid var(--gold);
@@ -105,7 +102,6 @@ body {
   margin-top: 8px;
 }
 
-/* section headings */
 section h2 {
   color: var(--gold);
   margin-bottom: 15px;
@@ -131,7 +127,7 @@ li {
   margin-bottom: 10px;
 }
 
-/* links */
+
 a {
   color: var(--gold);
   text-decoration: none;
@@ -146,10 +142,10 @@ a:focus {
   border-bottom: 2px dotted var(--gold);
 }
 
-/* responsive adjustments */
+
 @media (max-width: 1024px) {
   .photo-gallery figure {
-    width: 30%; /* 3 per row on medium screens */
+    width: 30%;
   }
 }
 
@@ -164,12 +160,12 @@ a:focus {
     margin-bottom: 20px;
   }
   .photo-gallery figure {
-    width: 45%; /* 2 per row */
+    width: 45%; 
   }
 }
 
 @media (max-width: 480px) {
   .photo-gallery figure {
-    width: 100%; /* 1 per row */
+    width: 100%;
   }
 }

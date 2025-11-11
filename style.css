@@ -32,6 +32,17 @@ body {
   box-shadow: 0 0 25px rgba(255, 184, 28, 0.3);
 }
 
+.projects-list li {
+  position: relative;
+  padding-right: 120px; /* space so text doesn't crash into the link */
+}
+
+.projects-list li a {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 /* header */
 .header-flex {
   display: flex;

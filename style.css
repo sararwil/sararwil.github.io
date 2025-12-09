@@ -14,7 +14,6 @@ body, h1, h2, p, ul, li {
   color: var(--white);
 }
 
-/* background */
 body {
   background-color: var(--black);
   line-height: 1.6;
@@ -32,18 +31,44 @@ body {
   box-shadow: 0 0 25px rgba(255, 184, 28, 0.3);
 }
 
-.projects-list li {
-  position: relative;
-  padding-right: 120px; /* space so text doesn't crash into the link */
+/* ========================= */
+/* NAVIGATION BAR */
+/* ========================= */
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin: 25px 0 40px 0;
+  padding: 0;
 }
 
-.projects-list li a {
-  position: absolute;
-  right: 0;
-  top: 0;
+.nav-bar a {
+  color: var(--gold);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
 }
 
-/* header */
+.nav-bar a:hover {
+  color: var(--white);
+  border-bottom: 2px dotted var(--gold);
+}
+
+/* ACTIVE SCROLL HIGHLIGHT */
+.nav-bar a.active {
+  color: var(--white);
+  border-bottom: 2px solid var(--gold);
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
 .header-flex {
   display: flex;
   align-items: center;
@@ -80,17 +105,19 @@ body {
   color: var(--white);
 }
 
+/* ========================= */
+/* PHOTO GALLERY — 4 COLUMNS */
+/* ========================= */
+
 .photo-gallery {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   margin: 40px 0;
-  flex-wrap: nowrap;
 }
 
 .photo-gallery figure {
   text-align: center;
-  width: 22%;
 }
 
 .photo-gallery img {
@@ -113,6 +140,10 @@ body {
   margin-top: 8px;
 }
 
+/* ========================= */
+/* SECTION TITLES */
+/* ========================= */
+
 section h2 {
   color: var(--gold);
   margin-bottom: 15px;
@@ -122,7 +153,10 @@ section h2 {
   font-weight: 700;
 }
 
-/* body text */
+/* ========================= */
+/* BODY TEXT */
+/* ========================= */
+
 section p, section ul {
   margin-bottom: 25px;
   font-size: 1.1rem;
@@ -138,7 +172,6 @@ li {
   margin-bottom: 10px;
 }
 
-
 a {
   color: var(--gold);
   text-decoration: none;
@@ -153,10 +186,13 @@ a:focus {
   border-bottom: 2px dotted var(--gold);
 }
 
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
 
 @media (max-width: 1024px) {
-  .photo-gallery figure {
-    width: 30%;
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -170,13 +206,13 @@ a:focus {
     height: 200px;
     margin-bottom: 20px;
   }
-  .photo-gallery figure {
-    width: 45%; 
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
-  .photo-gallery figure {
-    width: 100%;
+  .photo-gallery {
+    grid-template-columns: 1fr;
   }
 }

@@ -19,7 +19,7 @@
       </div>
     </header>
 
-    <!-- ===== NAVIGATION BAR ===== -->
+    <!-- ===== NAV BAR ===== -->
     <nav class="nav-bar">
       <ul>
         <li><a href="#about">About Me</a></li>
@@ -28,7 +28,7 @@
         <li><a href="#links">Links</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#projects">Professional Development & Projects</a></li>
-        <li><a href="#photos">Photo Gallery</a></li>
+        <li><a href="#gallery">Gallery</a></li>
       </ul>
     </nav>
 
@@ -43,13 +43,13 @@
     <!-- ===== EDUCATION ===== -->
     <section id="education">
       <h2>Education</h2>
-      <p>Bachelor of Philosophy in Mathematics – University of Pittsburgh</p>
+      <p>Bachelor of Science in Mathematics – University of Pittsburgh</p>
     </section>
 
     <!-- ===== RESEARCH INTERESTS ===== -->
     <section id="research-interests">
       <h2>Research Interests</h2>
-      <p><strong>Numerical Analysis, Scientific Computing, Computational Physics, Partial Differential Equations</strong></p>
+      <p><strong>Numerical Analysis, Scientific Computing, Computational Fluid Dynamics & Plasma Physics, Partial Differential Equations</strong></p>
     </section>
 
     <!-- ===== LINKS ===== -->
@@ -58,7 +58,7 @@
       <ul>
         <li><a href="srjw_cv (1).pdf" target="_blank" rel="noopener">CV</a></li>
         <li><a href="https://linkedin.com/in/sararwilson" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://scholar.google.com/citations?hl=en&view_op=list_works&authuser=1&gmla=AH8HC4zmExVFby4qpeuSyhFExwfkhCFVq6toroQ5w7nITroVYwfZ2nlTzI_pV5wW01di0Qx7ty0HRU31LkNBdA&user=DSDCG3YAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://scholar.google.com/citations?user=DSDCG3YAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
       </ul>
     </section>
 
@@ -67,7 +67,7 @@
       <h2>Publications</h2>
       <ul>
         <li>
-          <strong>An Analysis of a 2 x 2 Keyfitz-Kranzer Type Balance System with Varying Generalized Chaplygin Gas</strong>, Physics of Fluids, 2024.
+          <strong>An Analysis of a 2 × 2 Keyfitz–Kranzer Type Balance System with Varying Generalized Chaplygin Gas</strong>, Physics of Fluids, 2024.
           <a href="https://doi.org/10.1063/5.0231413" target="_blank" rel="noopener">[Link]</a>
         </li>
       </ul>
@@ -88,7 +88,7 @@
         </li>
 
         <li>
-          <strong>Semiconductor Research Corporation and University of Alabama REU in Semiconductor Device Fabrication 2025</strong>
+          <strong>Semiconductor Research Corporation & University of Alabama REU 2025</strong>
           Wireless Power Transfer
           <a href="sara wilson REU poster (1).pdf" target="_blank" rel="noopener">[Poster]</a>
         </li>
@@ -112,72 +112,48 @@
       </ul>
     </section>
 
-    <!-- ===== PHOTO GALLERY ===== -->
-    <section id="photos" class="photo-gallery">
-      <h2>Photo Gallery</h2>
+    <!-- ===== GALLERY ===== -->
+    <section id="gallery" class="photo-gallery">
+      <h2>Gallery</h2>
 
-      <figure>
-        <img src="me with math!.jpg" alt="Math!" />
-        <figcaption>Math!</figcaption>
-      </figure>
-
-      <figure>
-        <img src="jmm25.PNG" alt="JMM 2025" />
-        <figcaption>JMM Pi Mu Epsilon Poster Session 2025</figcaption>
-      </figure>
-
-      <figure>
-        <img src="daisy.JPG" alt="Daisy" />
-        <figcaption>Daisy</figcaption>
-      </figure>
-
-      <figure>
-        <img src="belle.jpeg" alt="Belle" />
-        <figcaption>Belle</figcaption>
-      </figure>
-
-      <figure>
-        <img src="cat loaf.jpeg" alt="Cat Loaf" />
-        <figcaption>A little guy loafing on a rug</figcaption>
-      </figure>
-
-      <figure>
-        <img src="sweater sad cat.jpeg" alt="Sweater Cat" />
-        <figcaption>He does not like the sweater!</figcaption>
-      </figure>
-
-      <figure>
-        <img src="pens win!.PNG" alt="Penguins win!" />
-        <figcaption>Enjoying a Penguins W for my birthday</figcaption>
-      </figure>
-
-      <figure>
-        <img src="2022 backyard brawl.png" alt="Panthers Win!" />
-        <figcaption>Pitt Panthers Backyard Brawl W 2022</figcaption>
-      </figure>
+      <figure><img src="me with math!.jpg" alt="Math!"><figcaption>Math!</figcaption></figure>
+      <figure><img src="jmm25.PNG" alt="JMM 2025"><figcaption>JMM 2025</figcaption></figure>
+      <figure><img src="daisy.JPG" alt="Daisy"><figcaption>Daisy</figcaption></figure>
+      <figure><img src="belle.jpeg" alt="Belle"><figcaption>Belle</figcaption></figure>
+      <figure><img src="cat loaf.jpeg" alt="Cat Loaf"><figcaption>Cat Loaf</figcaption></figure>
+      <figure><img src="sweater sad cat.jpeg" alt="Sweater Cat"><figcaption>Sweater Cat</figcaption></figure>
+      <figure><img src="pens win!.PNG" alt="Penguins Win"><figcaption>Penguins Win</figcaption></figure>
+      <figure><img src="2022 backyard brawl.png" alt="Panthers Win"><figcaption>Panthers Win</figcaption></figure>
     </section>
 
   </div>
 
-  <!-- ===== ACTIVE SCROLL HIGHLIGHT SCRIPT ===== -->
+  <!-- ===== LIGHTBOX POPUP ===== -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="">
+  </div>
+
+  <!-- ===== JAVASCRIPT ===== -->
   <script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-bar a");
+    // Lightbox functionality
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.querySelector(".lightbox-img");
+    const closeBtn = document.querySelector(".close");
 
-    window.addEventListener("scroll", () => {
-      let current = "";
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 140;
-        if (scrollY >= sectionTop) current = section.getAttribute("id");
+    document.querySelectorAll(".photo-gallery img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
       });
+    });
 
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-          link.classList.add("active");
-        }
-      });
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target !== lightboxImg) lightbox.style.display = "none";
     });
   </script>
 

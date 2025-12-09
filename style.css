@@ -4,10 +4,9 @@
   --black: #000000;
   --white: #ffffff;
   --gray: #1a1a1a;
-  --pitt-blue: #003594;
 }
 
-/* base styles */
+/* base */
 body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
@@ -16,56 +15,55 @@ body, h1, h2, p, ul, li {
 }
 
 body {
-  background-color: var(--black);
-  line-height: 1.6;
+  background: var(--black);
   padding: 30px;
 }
 
-/* container */
 .container {
   max-width: 950px;
   margin: 0 auto;
-  background-color: var(--gray);
+  background: var(--gray);
   border: 4px solid var(--gold);
   border-radius: 16px;
   padding: 40px 50px;
-  box-shadow: 0 0 25px rgba(255, 184, 28, 0.3);
 }
 
-/* ===== NAVIGATION ===== */
+/* ===== NAV BAR (gold pill buttons) ===== */
 .nav-bar ul {
-  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 35px;
-  margin: 25px 0 40px;
+  gap: 15px;
+  flex-wrap: wrap;
   padding: 0;
+  margin: 25px 0 40px;
+  list-style: none;
 }
 
 .nav-bar a {
-  color: var(--pitt-blue);
-  font-weight: 800;
-  font-size: 1.2rem;
+  display: inline-block;
+  padding: 8px 18px;
+  border: 2px solid var(--gold);
+  border-radius: 25px;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1.05rem;
   text-decoration: none;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-  transition: 0.2s ease;
+  transition: 0.25s ease;
 }
 
-.nav-bar a:hover,
-.nav-bar a.active {
-  color: var(--white);
-  border-bottom: 2px dotted var(--gold);
+.nav-bar a:hover {
+  background: var(--gold);
+  color: var(--black);
 }
 
-/* ===== HEADER ===== */
+/* Header */
 .header-flex {
   display: flex;
-  align-items: center;
   gap: 25px;
-  margin-bottom: 35px;
+  align-items: center;
   border-bottom: 3px solid var(--gold);
   padding-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .headshot {
@@ -74,104 +72,63 @@ body {
   border-radius: 12px;
   border: 5px solid var(--gold);
   object-fit: cover;
-  box-shadow: 0 0 15px rgba(255, 184, 28, 0.4);
-  transition: 0.3s ease;
 }
 
-.headshot:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 184, 28, 0.7);
-}
-
-/* ===== HEADINGS ===== */
+/* Sections */
 section h2 {
-  color: var(--gold);
-  margin-bottom: 15px;
   border-bottom: 2px solid var(--gold);
   padding-bottom: 5px;
+  margin-bottom: 15px;
   font-size: 1.6rem;
-  font-weight: 700;
+  color: var(--gold);
 }
 
-/* ===== GALLERY GRID ===== */
+/* ===== GALLERY (2×4 grid, bigger pics, no captions) ===== */
 .photo-gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
-  margin: 40px 0;
-}
-
-.photo-gallery figure {
-  text-align: center;
+  margin-top: 30px;
 }
 
 .photo-gallery img {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 1.1;
   object-fit: cover;
   border-radius: 12px;
   border: 4px solid var(--gold);
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: 0.25s;
 }
 
 .photo-gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   border-color: var(--white);
-}
-
-.photo-gallery figcaption {
-  margin-top: 8px;
-  color: var(--gold);
-  font-weight: bold;
 }
 
 /* ===== LIGHTBOX ===== */
 .lightbox {
   display: none;
-  justify-content: center;
-  align-items: center;
   position: fixed;
-  z-index: 999;
   inset: 0;
   background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
 .lightbox-img {
   max-width: 90%;
   max-height: 90%;
-  border-radius: 12px;
   border: 4px solid var(--gold);
+  border-radius: 12px;
 }
 
 .close {
   position: absolute;
-  top: 25px;
+  top: 20px;
   right: 35px;
   font-size: 3rem;
   color: var(--white);
   cursor: pointer;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .photo-gallery {
-    grid-template-columns: repeat(3,1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .photo-gallery {
-    grid-template-columns: repeat(2,1fr);
-  }
-  .header-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .photo-gallery {
-    grid-template-columns: 1fr;
-  }
 }

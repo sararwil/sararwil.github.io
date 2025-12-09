@@ -1,12 +1,18 @@
-/* colors */
+/* =======================
+      COLOR PALETTE
+======================= */
 :root {
-  --gold: #ffb81c;
+  --gold: #ffb81c;          /* Steelers gold */
+  --steelers-blue: #00539B; /* Links */
+  --steelers-red: #C8102E;  /* Nav buttons */
   --black: #000000;
   --white: #ffffff;
-  --gray: #1a1a1a;
+  --gray: #a1a1a1;          /* lighter than before */
 }
 
-/* base */
+/* =======================
+      GLOBAL BASE
+======================= */
 body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
@@ -14,155 +20,177 @@ body, h1, h2, p, ul, li {
   color: var(--white);
 }
 
-/* improved readability globally */
 body {
   background: var(--black);
-  padding: 30px;
+  padding: 45px;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.85;
 }
 
-/* container */
+/* =======================
+      CONTAINER
+======================= */
 .container {
-  max-width: 950px;
+  max-width: 1100px;
   margin: 0 auto;
   background: var(--gray);
   border: 4px solid var(--gold);
-  border-radius: 16px;
-  padding: 40px 50px;
+  border-radius: 18px;
+  padding: 70px 70px;
 }
 
-/* ===== ALWAYS GOLD LINKS ===== */
+/* =======================
+      LINK STYLING (Steelers Blue)
+======================= */
 a,
 a:visited {
-  color: var(--gold) !important;
+  color: var(--steelers-blue) !important;
   text-decoration: none;
   border-bottom: 2px dotted transparent;
-  font-weight: 600;
-  transition: 0.2s ease;
+  font-weight: 700;
+  transition: 0.25s ease;
 }
 
 a:hover {
   color: var(--white) !important;
-  border-bottom: 2px dotted var(--gold);
+  border-bottom: 2px dotted var(--steelers-blue);
 }
 
-/* ===== NAV BAR (pill buttons, larger) ===== */
+/* =======================
+      NAVIGATION BAR (Steelers Red Pills)
+======================= */
 .nav-bar ul {
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 26px;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  margin: 30px 0 45px;
+  margin: 50px 0 70px;
 }
 
 .nav-bar a {
   display: inline-block;
-  padding: 12px 30px;
-  border: 2px solid var(--gold);
-  border-radius: 30px;
-  color: var(--gold) !important;
-  font-weight: 700;
-  font-size: 1.25rem;
+  padding: 16px 40px;
+  border: 3px solid var(--steelers-red);
+  border-radius: 40px;
+  color: var(--steelers-red) !important;
+  font-weight: 800;
+  font-size: 1.45rem;
   transition: 0.25s ease;
 }
 
 .nav-bar a:hover {
-  background: var(--gold);
-  color: var(--black) !important;
+  background: var(--steelers-red);
+  color: var(--white) !important;
 }
 
-/* ===== HEADER ===== */
+/* =======================
+      HEADER
+======================= */
 .header-flex {
   display: flex;
-  gap: 25px;
+  gap: 35px;
   align-items: center;
-  border-bottom: 3px solid var(--gold);
-  padding-bottom: 20px;
-  margin-bottom: 45px;
+  border-bottom: 4px solid var(--gold);
+  padding-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .headshot {
-  width: 220px;
-  height: 220px;
-  border-radius: 12px;
+  width: 240px;
+  height: 240px;
+  border-radius: 14px;
   border: 5px solid var(--gold);
   object-fit: cover;
 }
 
-/* your name stays the same size */
+/* Your name stays same size */
 .intro-text h1 {
   font-size: 4rem;
   color: var(--gold);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
+/* Subtitle now much larger */
 .intro-text p {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 600;
+  margin-top: 5px;
+  line-height: 1.45;
 }
 
-/* ===== SECTION HEADERS ===== */
+/* =======================
+      SECTION HEADERS
+======================= */
 section h2 {
   color: var(--gold);
-  margin-bottom: 22px;
-  border-bottom: 2px solid var(--gold);
-  padding-bottom: 8px;
-  font-size: 2rem;
+  margin-bottom: 35px;
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 10px;
+  font-size: 2.4rem;
   font-weight: 700;
 }
 
-/* ===== SECTION SPACING ===== */
+/* More space between sections */
 section {
-  margin-bottom: 60px;
+  margin-bottom: 95px;
 }
 
-/* ===== BODY TEXT (larger + spaced) ===== */
+/* =======================
+      PARAGRAPH TEXT (Bigger)
+======================= */
 section p {
-  margin-bottom: 28px;
-  font-size: 1.25rem;
-  line-height: 1.7;
+  margin-bottom: 40px;
+  font-size: 1.45rem;
+  line-height: 1.95;
+  color: var(--white);
 }
 
+/* =======================
+      LISTS (Bigger + Spaced)
+======================= */
 ul {
   list-style-type: disc;
-  margin-left: 28px;
-  margin-bottom: 25px;
+  margin-left: 35px;
+  margin-bottom: 35px;
 }
 
 li {
-  margin-bottom: 14px;
-  font-size: 1.22rem;
-  line-height: 1.65;
+  margin-bottom: 22px;
+  font-size: 1.42rem;
+  line-height: 1.9;
 }
 
-/* ===== GALLERY (2×4 grid, more spacing) ===== */
+/* =======================
+      GALLERY (2×4, no captions, bigger spacing)
+======================= */
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 35px;
-  margin-top: 25px;
-  margin-bottom: 60px;
+  gap: 50px;
+  margin-top: 35px;
+  margin-bottom: 85px;
 }
 
 .photo-gallery img {
   width: 100%;
   aspect-ratio: 1.1;
   object-fit: cover;
-  border-radius: 12px;
-  border: 4px solid var(--gold);
+  border-radius: 14px;
+  border: 5px solid var(--gold);
   cursor: pointer;
   transition: 0.25s ease;
 }
 
 .photo-gallery img:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
   border-color: var(--white);
 }
 
-/* ===== LIGHTBOX ===== */
+/* =======================
+      LIGHTBOX
+======================= */
 .lightbox {
   display: none;
   position: fixed;
@@ -176,15 +204,15 @@ li {
 .lightbox-img {
   max-width: 90%;
   max-height: 90%;
-  border: 4px solid var(--gold);
+  border: 5px solid var(--gold);
   border-radius: 12px;
 }
 
 .close {
   position: absolute;
-  top: 20px;
-  right: 35px;
-  font-size: 3rem;
+  top: 25px;
+  right: 40px;
+  font-size: 3.5rem;
   color: var(--white);
   cursor: pointer;
 }

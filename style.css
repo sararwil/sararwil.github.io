@@ -1,13 +1,16 @@
 /* =======================
-      COLOR PALETTE
+   COLOR PALETTE — Penguins Baby Blue Theme
 ======================= */
 :root {
-  --gold: #ffb81c;          /* Steelers gold */
-  --steelers-blue: #0084ff; /* Links */
-  --steelers-red: #ff0000;  /* Nav buttons */
-  --black: #000000;
+  --baby-blue: #A4D7F5;     /* Winter Classic light blue */
+  --navy: #003263;          /* Deep Penguins navy */
+  --gold: #FFB81C;          /* Penguins gold */
   --white: #ffffff;
-  --gray: #2f2f2f;          /* lighter than before */
+  --black: #000000;
+
+  /* Background grays tuned for high contrast */
+  --gray-light: #3a3a3a;
+  --gray-dark: #1f1f1f;
 }
 
 /* =======================
@@ -30,21 +33,22 @@ body {
 /* =======================
       CONTAINER
 ======================= */
+/* lighter gray background for readability */
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  background: var(--gray);
+  background: var(--gray-light);
   border: 4px solid var(--gold);
   border-radius: 18px;
   padding: 70px 70px;
 }
 
 /* =======================
-      LINK STYLING (Steelers Blue)
+      LINKS (Baby Blue)
 ======================= */
 a,
 a:visited {
-  color: var(--steelers-blue) !important;
+  color: var(--baby-blue) !important;
   text-decoration: none;
   border-bottom: 2px dotted transparent;
   font-weight: 700;
@@ -53,11 +57,11 @@ a:visited {
 
 a:hover {
   color: var(--white) !important;
-  border-bottom: 2px dotted var(--steelers-blue);
+  border-bottom: 2px dotted var(--baby-blue);
 }
 
 /* =======================
-      NAVIGATION BAR (Steelers Red Pills)
+   NAVIGATION BAR — Navy Pills + Gold Accents
 ======================= */
 .nav-bar ul {
   display: flex;
@@ -72,17 +76,19 @@ a:hover {
 .nav-bar a {
   display: inline-block;
   padding: 16px 40px;
-  border: 3px solid var(--steelers-red);
+  border: 3px solid var(--navy);
   border-radius: 40px;
-  color: var(--steelers-red) !important;
+  color: var(--baby-blue) !important;
+  background: var(--navy);
   font-weight: 800;
   font-size: 1.45rem;
   transition: 0.25s ease;
 }
 
 .nav-bar a:hover {
-  background: var(--steelers-red);
-  color: var(--white) !important;
+  background: var(--gold);
+  color: var(--black) !important;
+  border-color: var(--gold);
 }
 
 /* =======================
@@ -105,19 +111,20 @@ a:hover {
   object-fit: cover;
 }
 
-/* Your name stays same size */
+/* Name unchanged */
 .intro-text h1 {
   font-size: 4rem;
   color: var(--gold);
   margin-bottom: 15px;
 }
 
-/* Subtitle now much larger */
+/* Subtitle larger */
 .intro-text p {
   font-size: 1.8rem;
   font-weight: 600;
   margin-top: 5px;
   line-height: 1.45;
+  color: var(--baby-blue);
 }
 
 /* =======================
@@ -132,13 +139,13 @@ section h2 {
   font-weight: 700;
 }
 
-/* More space between sections */
+/* Bigger spacing between sections */
 section {
   margin-bottom: 95px;
 }
 
 /* =======================
-      PARAGRAPH TEXT (Bigger)
+      PARAGRAPHS (larger)
 ======================= */
 section p {
   margin-bottom: 40px;
@@ -148,7 +155,7 @@ section p {
 }
 
 /* =======================
-      LISTS (Bigger + Spaced)
+      LISTS
 ======================= */
 ul {
   list-style-type: disc;
@@ -163,7 +170,7 @@ li {
 }
 
 /* =======================
-      GALLERY (2×4, no captions, bigger spacing)
+      GALLERY (2×4, no captions)
 ======================= */
 .photo-gallery {
   display: grid;
@@ -185,7 +192,7 @@ li {
 
 .photo-gallery img:hover {
   transform: scale(1.05);
-  border-color: var(--white);
+  border-color: var(--baby-blue);
 }
 
 /* =======================

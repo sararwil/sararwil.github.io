@@ -28,6 +28,21 @@ body {
   padding: 40px 50px;
 }
 
+/* ===== LINKS (ALWAYS GOLD) ===== */
+a,
+a:visited {
+  color: var(--gold) !important;
+  text-decoration: none;
+  border-bottom: 2px dotted transparent;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  color: var(--white) !important;
+  border-bottom: 2px dotted var(--gold);
+}
+
 /* ===== NAV BAR (gold pill buttons) ===== */
 .nav-bar ul {
   display: flex;
@@ -41,22 +56,22 @@ body {
 
 .nav-bar a {
   display: inline-block;
-  padding: 8px 18px;
+  padding: 8px 20px;
   border: 2px solid var(--gold);
   border-radius: 25px;
-  color: var(--gold);
+  color: var(--gold) !important;
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   text-decoration: none;
   transition: 0.25s ease;
 }
 
 .nav-bar a:hover {
   background: var(--gold);
-  color: var(--black);
+  color: var(--black) !important;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 .header-flex {
   display: flex;
   gap: 25px;
@@ -74,6 +89,13 @@ body {
   object-fit: cover;
 }
 
+/* ===== NAME SIZE BIGGER ===== */
+.intro-text h1 {
+  font-size: 4rem;  /* bump from 3rem → 4rem */
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
 /* Sections */
 section h2 {
   border-bottom: 2px solid var(--gold);
@@ -83,7 +105,7 @@ section h2 {
   color: var(--gold);
 }
 
-/* ===== GALLERY (2×4 grid, bigger pics, no captions) ===== */
+/* ===== GALLERY (2×4 grid, no captions) ===== */
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

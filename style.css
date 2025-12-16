@@ -1,16 +1,18 @@
 /* =======================
-   COLOR PALETTE — Penguins Baby Blue Theme
+   COLOR PALETTE — Retro Penguins (Black / Gold / Powder Blue)
 ======================= */
 :root {
-  --baby-blue: #A4D7F5;     /* Winter Classic light blue */
-  --navy: #003263;          /* Deep Penguins navy */
-  --gold: #FFB81C;          /* Penguins gold */
-  --white: #ffffff;
+  --powder-blue: #A5CDE8;   /* retro light blue */
+  --gold: #F3B229;         /* warm retro gold */
+  --white: #F7F7F4;        /* off-white (easier than pure white) */
   --black: #000000;
 
-  /* Background grays tuned for high contrast */
-  --gray-light: #3a3a3a;
-  --gray-dark: #1f1f1f;
+  /* Backgrounds tuned for contrast + less glare than pure black blocks */
+  --gray-light: #2A2E35;   /* container bg */
+  --gray-dark: #121418;    /* page bg / deep charcoal */
+
+  /* Optional: subtle outline */
+  --outline: rgba(255,255,255,0.08);
 }
 
 /* =======================
@@ -24,31 +26,31 @@ body, h1, h2, p, ul, li {
 }
 
 body {
-  background: var(--black);
-  padding: 45px;
-  font-size: 18px;
-  line-height: 1.85;
+  background: var(--gray-dark);
+  padding: 30px;          /* was 45px */
+  font-size: 14px;        /* was 18px (smaller overall) */
+  line-height: 1.7;       /* was 1.85 */
 }
 
 /* =======================
       CONTAINER
 ======================= */
-/* lighter gray background for readability */
 .container {
-  max-width: 1100px;
+  max-width: 1000px;                /* was 1100px */
   margin: 0 auto;
   background: var(--gray-light);
-  border: 4px solid var(--gold);
-  border-radius: 18px;
-  padding: 70px 70px;
+  border: 3px solid var(--gold);    /* was 4px */
+  border-radius: 16px;              /* was 18px */
+  padding: 44px 48px;               /* was 70px 70px */
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
 }
 
 /* =======================
-      LINKS (Baby Blue)
+      LINKS (Powder Blue)
 ======================= */
 a,
 a:visited {
-  color: var(--baby-blue) !important;
+  color: var(--powder-blue) !important;
   text-decoration: none;
   border-bottom: 2px dotted transparent;
   font-weight: 700;
@@ -57,31 +59,32 @@ a:visited {
 
 a:hover {
   color: var(--white) !important;
-  border-bottom: 2px dotted var(--baby-blue);
+  border-bottom: 2px dotted var(--powder-blue);
 }
 
 /* =======================
-   NAVIGATION BAR — Navy Pills + Gold Accents
+   NAVIGATION BAR — Retro pills (Black + Gold) with Blue text
 ======================= */
 .nav-bar ul {
   display: flex;
   justify-content: center;
-  gap: 26px;
+  gap: 14px;                 /* was 26px */
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  margin: 50px 0 70px;
+  margin: 26px 0 36px;       /* was 50px 0 70px */
 }
 
 .nav-bar a {
   display: inline-block;
-  padding: 16px 40px;
-  border: 3px solid var(--navy);
-  border-radius: 40px;
-  color: var(--baby-blue) !important;
-  background: var(--navy);
+  padding: 10px 18px;        /* was 16px 40px */
+  border: 2px solid var(--gold);  /* was navy */
+  border-radius: 999px;
+  color: var(--powder-blue) !important;
+  background: var(--black);
   font-weight: 800;
-  font-size: 1.45rem;
+  font-size: 1.05rem;        /* was 1.45rem */
+  letter-spacing: 0.2px;
   transition: 0.25s ease;
 }
 
@@ -96,53 +99,56 @@ a:hover {
 ======================= */
 .header-flex {
   display: flex;
-  gap: 35px;
+  gap: 20px;                      /* was 35px */
   align-items: center;
-  border-bottom: 4px solid var(--gold);
-  padding-bottom: 30px;
-  margin-bottom: 60px;
+  border-bottom: 3px solid var(--gold);  /* was 4px */
+  padding-bottom: 18px;           /* was 30px */
+  margin-bottom: 28px;            /* was 60px */
 }
 
 .headshot {
-  width: 240px;
-  height: 240px;
+  width: 170px;               /* was 240px */
+  height: 170px;              /* was 240px */
   border-radius: 14px;
-  border: 5px solid var(--gold);
+  border: 4px solid var(--gold);  /* was 5px */
   object-fit: cover;
 }
 
-/* Name unchanged */
+/* Name */
 .intro-text h1 {
-  font-size: 4rem;
+  font-size: 2.35rem;     /* was 4rem */
   color: var(--gold);
-  margin-bottom: 15px;
+  margin-bottom: 8px;     /* was 15px */
+  line-height: 1.15;
 }
 
-/* Subtitle larger */
+/* Subtitle */
 .intro-text p {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-top: 5px;
-  line-height: 1.45;
-  color: var(--baby-blue);
+  font-size: 1.15rem;     /* was 1.8rem */
+  font-weight: 650;
+  margin-top: 4px;
+  line-height: 1.35;
+  color: var(--powder-blue);
 }
-/* Penguins-style stripe under name */
+
+/* Penguins-style stripe under name (retro: black/gold/blue/black) */
 .pens-stripe {
   width: 100%;
-  height: 10px;
-  margin-top: 18px;
+  height: 9px;            /* was 10px */
+  margin-top: 12px;       /* was 18px */
   border-radius: 6px;
   background: linear-gradient(
     to right,
-    var(--baby-blue) 20%,
-    var(--navy) 20%,
-    var(--navy) 40%,
-    var(--gold) 40%,
-    var(--gold) 60%,
-    var(--navy) 60%,
-    var(--navy) 80%,
-    var(--baby-blue) 80%
+    var(--black) 0%,
+    var(--black) 22%,
+    var(--gold) 22%,
+    var(--gold) 50%,
+    var(--powder-blue) 50%,
+    var(--powder-blue) 78%,
+    var(--black) 78%,
+    var(--black) 100%
   );
+  outline: 1px solid var(--outline);
 }
 
 /* =======================
@@ -150,25 +156,26 @@ a:hover {
 ======================= */
 section h2 {
   color: var(--gold);
-  margin-bottom: 35px;
-  border-bottom: 3px solid var(--gold);
-  padding-bottom: 10px;
-  font-size: 2.4rem;
-  font-weight: 700;
+  margin-bottom: 14px;          /* was 35px */
+  border-bottom: 2px solid var(--gold); /* was 3px */
+  padding-bottom: 8px;          /* was 10px */
+  font-size: 1.45rem;           /* was 2.4rem */
+  font-weight: 800;
+  letter-spacing: 0.2px;
 }
 
-/* Bigger spacing between sections */
+/* Spacing between sections */
 section {
-  margin-bottom: 95px;
+  margin-bottom: 42px;          /* was 95px */
 }
 
 /* =======================
-      PARAGRAPHS (larger)
+      PARAGRAPHS
 ======================= */
 section p {
-  margin-bottom: 40px;
-  font-size: 1.45rem;
-  line-height: 1.95;
+  margin-bottom: 16px;          /* was 40px */
+  font-size: 1.05rem;           /* was 1.45rem */
+  line-height: 1.75;            /* was 1.95 */
   color: var(--white);
 }
 
@@ -177,14 +184,14 @@ section p {
 ======================= */
 ul {
   list-style-type: disc;
-  margin-left: 35px;
-  margin-bottom: 35px;
+  margin-left: 20px;            /* was 35px */
+  margin-bottom: 16px;          /* was 35px */
 }
 
 li {
-  margin-bottom: 22px;
-  font-size: 1.42rem;
-  line-height: 1.9;
+  margin-bottom: 10px;          /* was 22px */
+  font-size: 1.03rem;           /* was 1.42rem */
+  line-height: 1.7;             /* was 1.9 */
 }
 
 /* =======================
@@ -193,9 +200,9 @@ li {
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  margin-top: 35px;
-  margin-bottom: 85px;
+  gap: 24px;                    /* was 50px */
+  margin-top: 16px;             /* was 35px */
+  margin-bottom: 30px;          /* was 85px */
 }
 
 .photo-gallery img {
@@ -203,14 +210,14 @@ li {
   aspect-ratio: 1.1;
   object-fit: cover;
   border-radius: 14px;
-  border: 5px solid var(--gold);
+  border: 4px solid var(--gold);  /* was 5px */
   cursor: pointer;
   transition: 0.25s ease;
 }
 
 .photo-gallery img:hover {
-  transform: scale(1.05);
-  border-color: var(--baby-blue);
+  transform: scale(1.03);          /* was 1.05 */
+  border-color: var(--powder-blue);
 }
 
 /* =======================
@@ -220,7 +227,7 @@ li {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.88);
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -229,15 +236,26 @@ li {
 .lightbox-img {
   max-width: 90%;
   max-height: 90%;
-  border: 5px solid var(--gold);
+  border: 4px solid var(--gold);   /* was 5px */
   border-radius: 12px;
 }
 
 .close {
   position: absolute;
-  top: 25px;
-  right: 40px;
-  font-size: 3.5rem;
+  top: 18px;            /* was 25px */
+  right: 24px;          /* was 40px */
+  font-size: 2.6rem;    /* was 3.5rem */
   color: var(--white);
   cursor: pointer;
+}
+
+/* =======================
+   Mobile tweaks (keeps things readable)
+======================= */
+@media (max-width: 720px) {
+  body { padding: 18px; }
+  .container { padding: 26px 18px; }
+  .header-flex { flex-direction: column; align-items: flex-start; }
+  .headshot { width: 150px; height: 150px; }
+  .nav-bar a { padding: 9px 14px; font-size: 1rem; }
 }

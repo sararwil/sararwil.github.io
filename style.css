@@ -254,8 +254,7 @@ section {
 }
 
 section h2 {
-  color: var(--accent);
-  text-shadow: 0 0 14px rgba(255,77,0,0.14);
+  color: var(--text);          /* white/off-white again */
   margin-bottom: 12px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--outline-2);
@@ -264,6 +263,7 @@ section h2 {
   font-weight: 750;
   letter-spacing: 0.2px;
 }
+
 
 /* Subtle technical prefix without changing your labels */
 section h2::before {

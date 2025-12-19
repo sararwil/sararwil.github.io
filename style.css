@@ -25,8 +25,10 @@
   --r-sm: 12px;
 
   /* Fonts (add the Google Fonts links in HTML head) */
-  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+--font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+--font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+--font-heading: "Space Grotesk", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
 
   /* Layout */
   --container-w: 1020px;
@@ -206,7 +208,9 @@ a:hover {
 .nav-bar a {
   display: inline-block;
   padding: 10px 16px;
-  border-radius: 999px;
+
+  /* less circular */
+  border-radius: 14px;
 
   background: rgba(0,0,0,0.40);
   border: 1px solid var(--outline-2);
@@ -218,6 +222,7 @@ a:hover {
 
   transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
+
 
 .nav-bar a:hover {
   transform: translateY(-1px);
@@ -249,11 +254,10 @@ section {
 }
 
 section h2 {
-  font-family: var(--font-body);
-  color: var(--text);
+  color: var(--accent);
+  text-shadow: 0 0 14px rgba(255,77,0,0.14);
   margin-bottom: 12px;
   padding-bottom: 10px;
-
   border-bottom: 1px solid var(--outline-2);
 
   font-size: 1.35rem;
@@ -263,10 +267,7 @@ section h2 {
 
 /* Subtle technical prefix without changing your labels */
 section h2::before {
-  content: "§ ";
-  font-family: var(--font-mono);
-  color: rgba(255,77,0,0.95);
-  font-weight: 600;
+  content: none;
 }
 
 /* =======================

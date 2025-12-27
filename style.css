@@ -10,10 +10,11 @@
   --text: #f3f3f3;               /* off-white text */
   --muted: rgba(243,243,243,0.72);
 
-  /* Accent */
-  --accent: #ff4d00;             /* neon orange */
-  --accent-soft: rgba(255,77,0,0.20);
-  --accent-outline: rgba(255,77,0,0.55);
+    /* Accent */
+  --accent: #0074D9;               /* tech blue */
+  --accent-soft: rgba(0,116,217,0.20);
+  --accent-outline: rgba(0,116,217,0.55);
+
 
   /* Lines / outlines */
   --outline: rgba(255,255,255,0.08);

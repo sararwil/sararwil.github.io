@@ -36,6 +36,19 @@
   --pad: 44px;
 }
 
+.contact-info {
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-top: 0.5rem;
+}
+.contact-info a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
 /* =======================
       GLOBAL BASE
 ======================= */

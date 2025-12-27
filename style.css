@@ -295,7 +295,8 @@ section ul li {
     gap: 16px;
     align-items: start;
   }
-  .headshot { width: 160px; height: 160px; }
+  .headshot { width: 160h
+    px; height: 160px; }
   .nav-bar ul { margin: 14px 0 28px; }
   .nav-bar a { padding: 9px 14px; font-size: 0.98rem; }
   .photo-gallery { grid-template-columns: 1fr; }
